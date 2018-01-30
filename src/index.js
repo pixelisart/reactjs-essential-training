@@ -1,3 +1,8 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { hello, goodbye } from './lib';
+
+
 // const title = React.createElement(
 //     'h1',
 //     {id: 'title', className: 'header'},
@@ -12,8 +17,8 @@
 
 // USING ES6 STRUCTURING
 ////////////////////////////////////////////
-const { createElement } = React
-const { render } = ReactDOM
+//const { createElement } = React
+//const { render } = ReactDOM
 
 // Style element with css
 const style = {
@@ -40,10 +45,9 @@ const style = {
 // Need Babel Transpiler
 /////////////////////////////////////
 render(
-    <h1 id='title'
-        className='header'
-        style={style}>
-    Hey World
-    </h1>,
+    <div>
+        {hello}
+        {goodbye}
+    </div>,
     document.getElementById('react-container')
 )
